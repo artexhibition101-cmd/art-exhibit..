@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Exhibition</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand">Art Exhibition</a>
+      <nav class="nav" id="nav-menu">
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="menu-btn" class="hamburger" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner fade-in">
+      <div class="hero-text">
+        <h1>Welcome to the Art Exhibition</h1>
+        <p>Explore unique artworks from talented creators around the world.</p>
+        <a href="#gallery" class="btn">View Gallery</a>
+      </div>
+      <img src="https://picsum.photos/seed/heroimg/520/350" alt="Exhibition Image" class="hero-img">
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="section fade-in" id="gallery">
+    <div class="container">
+      <h2>Gallery</h2>
+      <div class="grid" id="gallery-grid"></div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section fade-in" id="contact">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form id="contact-form" action="https://formspree.io/f/xrblrwzv" method="POST" class="contact-form">
+        <label>
+          Your Name:
+          <input type="text" name="name" required />
+        </label>
+        <label>
+          Your Email:
+          <input type="email" name="email" required />
+        </label>
+        <label>
+          Message:
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="btn">Send Message</button>
+        </div>
+      </form>
+      <p id="form-status" class="form-status"></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer fade-in">
+    <div class="container footer-inner">
+      <p class="small">&copy; 2025 Art Exhibition. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lb-content">
+      <img id="lb-img" src="" alt="">
+      <div class="lb-meta">
+        <h3 id="lb-title"></h3>
+        <p id="lb-artist"></p>
+        <p id="lb-description"></p>
+      </div>
+    </div>
+    <button class="lb-close" id="lb-close" aria-label="Close">✖</button>
+  </div>
+
+  <!-- Back to top -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
+
+  <!-- Floating Chat (minimized by default) -->
+  <button id="chat-fab" class="chat-fab" aria-label="Open chat">💬</button>
+
+  <div id="chat-panel" class="chat-panel" aria-hidden="true">
+    <div class="chat-header">
+      <strong>Live Chat</strong>
+      <div class="chat-controls-inline">
+        <label class="sr-only" for="chat-role">Role</label>
+        <select id="chat-role" title="Send as">
+          <option value="visitor">Visitor</option>
+          <option value="admin">Admin</option>
+        </select>
+        <button id="chat-clear" class="icon-btn" title="Clear conversation">🗑️</button>
+        <button id="chat-close" class="icon-btn" aria-label="Close chat">×</button>
+      </div>
+    </div>
+    <div id="chat-messages" class="chat-messages" aria-live="polite"></div>
+    <form id="chat-form" class="chat-input-row" autocomplete="off">
+      <input id="chat-input" type="text" placeholder="Type a message…" />
+      <button type="submit" id="chat-send" class="btn">Send</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
