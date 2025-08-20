@@ -26,8 +26,10 @@
         <h1>Welcome to the Art Exhibition</h1>
         <p>Explore unique artworks from talented creators around the world.</p>
         <a href="#gallery" class="btn">View Gallery</a>
+        <p class="countdown">Next Gallery in: <span id="countdown">Loading...</span></p>
       </div>
-      <img src="https://picsum.photos/seed/heroimg/520/350" alt="Exhibition Image" class="hero-img">
+      <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXJ0fGVufDB8fDB8fA%3D%3D&ixlib=rb-4.0.3&w=520&q=80" 
+           alt="Exhibition Image" class="hero-img">
     </div>
   </section>
 
@@ -87,29 +89,21 @@
   <!-- Back to top -->
   <button id="back-to-top" class="back-to-top" aria-label="Back to top">↑</button>
 
-  <!-- Floating Chat (minimized by default) -->
-  <button id="chat-fab" class="chat-fab" aria-label="Open chat">💬</button>
 
-  <div id="chat-panel" class="chat-panel" aria-hidden="true">
-    <div class="chat-header">
-      <strong>Live Chat</strong>
-      <div class="chat-controls-inline">
-        <label class="sr-only" for="chat-role">Role</label>
-        <select id="chat-role" title="Send as">
-          <option value="visitor">Visitor</option>
-          <option value="admin">Admin</option>
-        </select>
-        <button id="chat-clear" class="icon-btn" title="Clear conversation">🗑️</button>
-        <button id="chat-close" class="icon-btn" aria-label="Close chat">×</button>
-      </div>
-    </div>
-    <div id="chat-messages" class="chat-messages" aria-live="polite"></div>
-    <form id="chat-form" class="chat-input-row" autocomplete="off">
-      <input id="chat-input" type="text" placeholder="Type a message…" />
-      <button type="submit" id="chat-send" class="btn">Send</button>
-    </form>
-  </div>
-
+  <!-- JS Files -->
   <script src="script.js"></script>
+
+  <!-- Tawk.to Live Support -->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/689c490d94b66319261b526d/1j2h7qnsc';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
 </body>
 </html>
